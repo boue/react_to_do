@@ -38,18 +38,18 @@
     }
   });
 
+  var TodoList = React.createClass({
+    render: function(){
+      return(
+        <TodoListItem>{itemText}</TodoListItem>
+      );
+    };
+    return <ul>{this.props.items.map(createItem)}</ul>;
+    }
+  });
 
   React.renderComponent(<TodoApp />, document.getElementById('todo'));
 
   </script>
 </body>
 </html
-
-
-var TodoBanner = React.createClass({
-  render: function(){
-    return (
-      <h3>TODO</h3>
-    );
-  }
-});
