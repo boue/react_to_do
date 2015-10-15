@@ -11,9 +11,27 @@
   </div>
   <script type="text/jsx">
   /** @jsx React.DOM */
+  var TodoApp = React.createClass({
+    getInitialState: function(){
+      return {items=[]};
+    },
 
+    updateItems: function(newItem){
+      var allItems = this.state.items.concat([newItem]);
+      this.setState({items: allItems});
+    },
+
+    render: function(){
+      return (
+        <TodoBanner />
+        <TodoList items={this.state.items} />
+        <TodoForm onFormSubmit={this.updateItems} />
+      );
+    }
+  });
 
   React.renderComponent(<TodoApp />, document.getElementById('todo'));
+  
   </script>
 </body>
-</html>
+</html
