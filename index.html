@@ -30,8 +30,26 @@
     }
   });
 
+  var TodoBanner = React.createClass({
+    render: function(){
+      return (
+        <h3>TO DO</h3>
+      );
+    }
+  });
+
+
   React.renderComponent(<TodoApp />, document.getElementById('todo'));
-  
+
   </script>
 </body>
 </html
+
+
+var TodoBanner = React.createClass({
+  render: function(){
+    return (
+      <h3>TODO</h3>
+    );
+  }
+});
